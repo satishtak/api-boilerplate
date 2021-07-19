@@ -1,0 +1,16 @@
+{
+    "something_went_wrong": "Something went wrong",
+    "invalid": "Please provide valid {{label, lowercase}}",
+    "string_min": "{{label}} should be minimum {{limit}} characters long",
+    "string_max": "{{label}} should be maximum {{limit}} characters long",
+    "string_length": "{{label}} length must be {{limit}} characters long",
+    "string_base": "{{label}} must be a string",
+    "number_positive": "{{label}} should be a positive number",
+    "number_min": "Value of {{label, lowercase}} should be greater than {{limit}}",
+    "number_max": "Value of {{label, lowercase}} should be lesser than {{limit}}",
+    "no_files_provided": "No files provided",
+    "file_max": "No more than {{limit}} file allowed",
+    "file_max_size": "Files less than {{limit}}MB are in size allowed",
+    "file_unsupported": "Only {{label}} file types are allowed",
+    "not_found": "{{label}} not found",
+}

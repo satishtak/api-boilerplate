@@ -1,0 +1,57 @@
+{
+  "name": "test",
+  "version": "1.0.17",
+  "description": "The microservice to handle .",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js src/*/*.feature",
+    "coverage": "nyc npm run test",
+    "lint": "eslint --max-warnings 0 ./ --cache",
+    "lint:fix": "eslint --fix .",
+    "coverage:detail": "nyc --reporter=lcov --reporter=text-summary npm run test",
+    "coverage:basic": "nyc npm run test",
+    "start": "NODE_PORT=8088 node src/index.js",
+    "start:dev": "NODE_PORT=8000 NODE_ENV=dev node src/index.js",
+    "start:qa": "NODE_PORT=8000 NODE_ENV=qa node src/index.js",
+    "start:local-dev": "NODE_PORT=8088 NODE_ENV=local-dev node src/index.js",
+    "start:production": "NODE_PORT=8000 NODE_ENV=production node src/index.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bfj": "^7.0.1",
+    "busboy": "^0.3.1",
+    "chai": "^4.2.0",
+    "dd-trace": "^0.16.2",
+    "disposable-email-domains": "^1.0.56",
+    "eslint-config-airbnb": "^18.1.0",
+    "joi": "^17.3.0",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.31",
+    "mongoose": "^5.9.4",
+    "nyc": "^15.1.0",
+    "qs": "^6.9.6",
+    "rand-token": "^1.0.1",
+    "randomstring": "1.1.5"
+  },
+  "devDependencies": {
+    "cucumber": "^6.0.5",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-mocha-no-only": "^1.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "husky": "^4.2.3"
+  },
+  "author": "",
+  "license": "ISC"
+}
